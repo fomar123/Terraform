@@ -53,3 +53,19 @@
 ###### Deployed nginx Application/Pod
             Kubectl apply -f nginx-config.yaml
 ###### Terraform destroy - to delete all your components
+
+
+# Project - CI/CD with Terraform 
+###### Created SSH key pair for EC2 Instance
+###### Created Credential in Jenkins
+###### Installed Terraform inside Jenkins Container
+         Go to root user: docker exec -it -u  0 <container id> bash!
+         Add HashiCorp key: curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add 
+         Install apt-add-repo command: apt-get install software-properties-common
+         Add the official HashiCorp Linux repository:  apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com$(lsb_release -cs) main"
+         Update and install:  apt-get update && apt-get install terraform
+###### Created Terraform configuration files to provision an ec2 server
+###### Created entry-script.sh file to install docker, docker-compose and start containers through docker-compose command
+###### Adjusted Jenkinsfile to include provision and deployment stage
+###### Included docker login to be able to pull Docker Images from private Docker repository
+###### Executed CI/CD pipeline successfully
