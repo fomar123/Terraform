@@ -32,3 +32,24 @@
 ###### Extract shell commands to own shell script
 ###### Accessed nginx through BrowserTerraform
               <IP-Address>:8080
+
+# Project - Provisioners 
+###### Used “remote-exec” provisioner
+###### Used “file” provisioner
+###### Used “local-exec” provisioner
+
+
+# Project - Modules 
+###### Extracted output values, variables and providers into its own file
+###### Created subnet module and used it in root config file
+###### Created webserver module and used it in root config file
+###### Executed terraform apply successfully
+
+# Project - Automate EKS Cluster with Terraform
+###### Created the VPC by using the VPC module
+###### Created the EKS cluster and worker nodes by using the EKS module
+###### Configured Kubernetes provider to authenticate with K8s cluster
+###### Applied configurations
+###### Deployed nginx Application/Pod
+            Kubectl apply -f nginx-config.yaml
+###### Terraform destroy - to delete all your components
