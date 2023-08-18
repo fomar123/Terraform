@@ -14,24 +14,32 @@
                terraform apply -var-file enviromental-variable.tfvars
 
 # Project - Automate AWS Infrastructure 
-######  Created VPC & Subnet
-###### Created custom Route Table
-###### Added Subnet Association with Route Table
-###### Configured Default/Main Route Table
-###### Created Security Group
-######  Configured Default Security Group❏Created EC2 Instance (Fetch AMI, Create ssh key-pair and download .pem file and restrict permission)
-###### SSH into EC2 instance
-          ssh -i ~/.ssh/<file-name> ec2-user@<public-ip>
-###### Configured ssh key pair in Terraform config file
-###### Created EC2 Instance-Fetch AMI-Create ssh key-pair and download .pem file
-###### Restrict permission 
-           chmod 400 <file name>
-###### SSH into EC2 instance
-###### Automated ssh key-pair and configured ssh key pair in Terraform config file
-###### Configured Terraform to install Docker and run nginx image
-###### Extract shell commands to own shell script
-###### Accessed nginx through BrowserTerraform
-              <IP-Address>:8080
+##### The project aimed to automate the setup of AWS infrastructure using Terraform, encompassing various tasks and configurations:
+
+Infrastructure Setup:
+- A Virtual Private Cloud (VPC) and a subnet were established to provide isolated network space.
+- A custom route table was created to control network traffic routing.
+- The subnet was associated with the custom route table.
+- The default/main route table was configured to manage network traffic.
+
+##### Security Configurations:
+- A security group was generated to control inbound and outbound traffic.
+- The default security group settings were configured to ensure proper access control.
+  
+##### EC2 Instance Provisioning:
+
+- An EC2 intance was created using an Amazon Machine Image (AMI).
+- An SSH key pair was generated, and the private key (.pem file) was downloaded. Permissions on the key file were restricted.
+- SSH access to the EC2 instance was established using the private key.
+
+##### Terraform and Automation:
+- The SSH key pair was incorporated into the Terraform configuration file.
+- Another EC2 instance was created with similar steps as before, automating the process.
+- Docker installation and execution of an nginx image were automated using Terraform.
+  
+##### Shell Scripting and Access:
+- Shell commands were extracted into a separate shell script for better management.
+- The nginx web server could be accessed through a browser using the specified IP address and port 8080.
 
 # Project - Provisioners 
 ###### Used “remote-exec” provisioner
