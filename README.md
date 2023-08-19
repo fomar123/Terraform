@@ -49,10 +49,25 @@ Infrastructure Setup:
 - The nginx web server could be accessed through a browser using the specified IP address and port 8080.
 
 # Project - Provisioners 
-###### Used “remote-exec” provisioner
-###### Used “file” provisioner
-###### Used “local-exec” provisioner
+##### In this project, various provisioners, including "remote-exec," "file," and "local-exec," were employed to execute specific actions during the Terraform deployment process:
 
+##### "remote-exec" Provisioner:
+- The "remote-exec" provisioner was used to execute commands on a remote resource after it was created.
+- This provisioner enables running scripts or commands on a newly provisioned instance.
+
+##### "file" Provisioner:
+- The "file" provisioner was utilized to copy files from the local machine to a remote resource.
+- This provisioner helps in transferring necessary configuration files or scripts to the remote instance.
+
+##### "local-exec" Provisioner:
+- The "local-exec" provisioner was employed to execute commands on the local machine where Terraform is running.
+- This provisioner is useful for performing actions that involve the local environment, such as setting up prerequisites before deploying resources.
+  
+##### In summary, this project demonstrates the practical use of different provisioners in Terraform:
+- "remote-exec" to execute commands on remote instances.
+- "file" to copy files to remote resources.
+- "local-exec" to execute commands on the local machine.
+These provisioners enhance the deployment process by enabling automated configurations, file transfers, and local setup tasks during Terraform's execution.
 
 # Project - Modules 
 ###### Extracted output values, variables and providers into its own file
