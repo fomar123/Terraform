@@ -1,9 +1,18 @@
-#  Project -  Resources and Data:
-###### Created new VPC
-###### Created Subnet in that new VPC
-###### Created new Subnet in existing default VPC (with data
-######  Execute VPC and Subnet:
-          terraform apply
+# Resources and Data Overview:
+##### This project involves the creation of networking resources using Terraform, along with their execution:
+
+##### New VPC Establishment:
+- A new Virtual Private Cloud (VPC) is created, providing isolated networking space for resources.
+  
+##### Subnet Creation in New VPC:
+- A subnet is set up within the newly created VPC, aiding in network segmentation and organization.
+  
+##### Additional Subnet in Default VPC:
+- Another subnet is generated within the pre-existing default VPC.
+- Data specific to this subnet is assumed but not explicitly stated.
+
+##### Infrastructure Execution:
+- The defined resources (new VPC, subnets) are executed and brought to life using the terraform apply command.
 
 
 # Enviromental Varible:
