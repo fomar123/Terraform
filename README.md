@@ -70,20 +70,44 @@ Infrastructure Setup:
 These provisioners enhance the deployment process by enabling automated configurations, file transfers, and local setup tasks during Terraform's execution.
 
 # Project - Modules 
-###### Extracted output values, variables and providers into its own file
-###### Created subnet module and used it in root config file
-###### Created webserver module and used it in root config file
-###### Executed terraform apply successfully
+#####€ This project focuses on modularizing Terraform configurations to enhance organization and reusability. Key steps include:
+
+##### Modular Structure:
+- Segregated output values, variables, and provider configurations into separate files for clarity and maintainability.
+
+##### Subnet Module:
+- Created a dedicated module for subnets, encapsulating subnet-related configurations.
+- Integrated the subnet module within the root configuration file.
+
+##### Webserver Module:
+- Developed a module tailored for web servers, encompassing web server-specific settings.
+- Incorporated the webserver module within the root configuration file.
+
+##### Successful Deployment:
+- Successfully executed terraform apply, deploying the infrastructure as defined by the modular configurations.
+  
 
 # Project - Automate EKS Cluster with Terraform
-###### Created the VPC by using the VPC module
-###### Created the EKS cluster and worker nodes by using the EKS module
-###### Configured Kubernetes provider to authenticate with K8s cluster
-###### Applied configurations
-###### Deployed nginx Application/Pod
-            Kubectl apply -f nginx-config.yaml
-###### Terraform destroy - to delete all your components
+##### This project revolves around automating the creation and management of an Amazon Elastic Kubernetes Service (EKS) cluster using Terraform. The project's key actions include:
 
+##### vModular VPC Creation:
+- Utilised a pre-existing VPC module to establish a Virtual Private Cloud (VPC) for the EKS cluster's network infrastructure.
+  
+##### EKS Cluster and Worker Nodes:
+- Employed an EKS module to define and deploy the EKS cluster and its associated worker nodes.
+  
+##### bKubernetes Provider Configuration:
+-Configured the Kubernetes provider to authenticate with the created Kubernetes cluster.
+
+##### Configuration Application:
+- Applied the Terraform configurations, resulting in the creation of the EKS cluster and worker nodes.
+  
+##### Deployed nginx Application:
+- Utilised kubectl to deploy an nginx application/pod to the EKS cluster.
+- Applied the configuration using "kubectl apply -f nginx-config.yaml".
+  
+##### Cleanup and Resource Deletion:
+Executed "terraform destroy" to remove all components created by Terraform, effectively cleaning up the infrastructure.
 
 # Project - CI/CD with Terraform 
 ###### Created SSH key pair for EC2 Instance
