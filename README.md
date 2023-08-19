@@ -6,12 +6,19 @@
           terraform apply
 
 
-# Project -  Enviromental Varible:
-######  Set variable using TF_VAR_name environment variable:
-           In command line set evir_var:
-                export  TF_VAR_avail_zone="us-east-2b"
-           Apply changes: 
-               terraform apply -var-file enviromental-variable.tfvars
+# Enviromental Varible:
+##### Used environmental variables to manage configuration settings effectively in a Terraform project:
+
+##### Environmental Variable Configuration:
+- An environmental variable named TF_VAR_avail_zone is set to define an availability zone for resources.
+- The variable is configured in the command line using the export command:
+
+             export TF_VAR_avail_zone="us-east-2b"
+  
+##### Applying Changes:
+- The configured environmental variable is used during the execution of Terraform.
+- Changes are applied to the infrastructure using the terraform apply command.
+- Additionally, a variable file named environmental-variable.tfvars can be used to load variables.
 
 # Project - Automate AWS Infrastructure 
 ##### The project aimed to automate the setup of AWS infrastructure using Terraform, encompassing various tasks and configurations:
