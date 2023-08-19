@@ -110,16 +110,32 @@ These provisioners enhance the deployment process by enabling automated configur
 Executed "terraform destroy" to remove all components created by Terraform, effectively cleaning up the infrastructure.
 
 # Project - CI/CD with Terraform 
-###### Created SSH key pair for EC2 Instance
-###### Created Credential in Jenkins
-###### Installed Terraform inside Jenkins Container
-         Go to root user: docker exec -it -u  0 <container id> bash!
-         Add HashiCorp key: curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add 
-         Install apt-add-repo command: apt-get install software-properties-common
-         Add the official HashiCorp Linux repository:  apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com$(lsb_release -cs) main"
-         Update and install:  apt-get update && apt-get install terraform
-###### Created Terraform configuration files to provision an ec2 server
-###### Created entry-script.sh file to install docker, docker-compose and start containers through docker-compose command
-###### Adjusted Jenkinsfile to include provision and deployment stage
-###### Included docker login to be able to pull Docker Images from private Docker repository
-###### Executed CI/CD pipeline successfully
+##### This project outlines the implementation of a Continuous Integration and Continuous Deployment (CI/CD) pipeline using Jenkins and Terraform, streamlining the process of provisioning and deploying infrastructure:
+
+##### EC2 SSH Key Pair:
+- Generated an SSH key pair to ensure secure access to the EC2 instance.
+  
+##### Jenkins Credential Setup:
+- Configured a credential in Jenkins, most likely for accessing the necessary resources (e.g., AWS credentials).
+  
+##### Terraform Installation within Jenkins Container:
+- Installed Terraform inside a Jenkins container.
+- Accessed the container's root user using docker exec -it -u 0 <container_id> bash!.
+- Added HashiCorp's GPG key and repository to the system.
+- Installed required software packages and added the HashiCorp Linux repository.
+- Updated and installed Terraform using apt-get.
+
+##### Terraform Configuration:
+- Created Terraform configuration files to define the desired infrastructure, such as an EC2 server.
+  
+##### Entry Script for EC2 Server:
+- Developed an entry-script.sh file that installs Docker and Docker Compose, then starts containers using Docker Compose.
+  
+##### Adjusted Jenkinsfile:
+- Modified the Jenkinsfile to include stages for provisioning and deploying infrastructure.
+  
+##### Docker Image Access:
+- Added a step for Docker login to allow pulling Docker images from a private Docker repository.
+  
+##### Successful CI/CD Execution:
+- Executed the CI/CD pipeline successfully, which involves provisioning infrastructure with Terraform and deploying containers using the entry script.
