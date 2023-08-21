@@ -5,7 +5,7 @@
 - A new Virtual Private Cloud (VPC) is created, providing isolated networking space for resources.
   
 ##### Subnet Creation in New VPC:
-- A subnet is set up within the newly created VPC, aiding in network segmentation and organization.
+- A subnet is set up within the newly created VPC, aiding in network segmentation and organisation.
   
 ##### Additional Subnet in Default VPC:
 - Another subnet is generated within the pre-existing default VPC.
@@ -45,7 +45,7 @@ Infrastructure Setup:
 ##### EC2 Instance Provisioning:
 
 - An EC2 intance was created using an Amazon Machine Image (AMI).
-- An SSH key pair was generated, and the private key (.pem file) was downloaded. Permissions on the key file were restricted.
+- An SSH key pair was generated, and the private key (.pem file) was downloaded. 
 - SSH access to the EC2 instance was established using the private key.
 
 ##### Terraform and Automation:
@@ -65,7 +65,7 @@ Infrastructure Setup:
 - This provisioner enables running scripts or commands on a newly provisioned instance.
 
 ##### "file" Provisioner:
-- The "file" provisioner was utilized to copy files from the local machine to a remote resource.
+- The "file" provisioner was utilised to copy files from the local machine to a remote resource.
 - This provisioner helps in transferring necessary configuration files or scripts to the remote instance.
 
 ##### "local-exec" Provisioner:
@@ -97,7 +97,7 @@ These provisioners enhance the deployment process by enabling automated configur
   
 
 # Project - Automate EKS Cluster with Terraform
-##### This project revolves around automating the creation and management of an Amazon Elastic Kubernetes Service (EKS) cluster using Terraform. The project's key actions include:
+##### This project revolves around automating the creation and management of an Amazon Elastic Kubernetes Service (EKS) cluster using Terraform. 
 
 ##### vModular VPC Creation:
 - Utilised a pre-existing VPC module to establish a Virtual Private Cloud (VPC) for the EKS cluster's network infrastructure.
@@ -106,7 +106,7 @@ These provisioners enhance the deployment process by enabling automated configur
 - Employed an EKS module to define and deploy the EKS cluster and its associated worker nodes.
   
 ##### bKubernetes Provider Configuration:
--Configured the Kubernetes provider to authenticate with the created Kubernetes cluster.
+- Configured the Kubernetes provider to authenticate with the created Kubernetes cluster.
 
 ##### Configuration Application:
 - Applied the Terraform configurations, resulting in the creation of the EKS cluster and worker nodes.
